@@ -1,0 +1,107 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #142140;
+}
+
+body {
+    background-color: #F8EAFF;
+    padding: 0;
+    margin: 0;
+}
+
+.video-background {
+    position: fixed; /* Keeps the video in place */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: -1; /* Places the video behind all content */
+    overflow: hidden;
+}
+
+/* Make the video cover the entire background */
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Ensures the video covers the background without distortion */
+}
+
+
+.nav-bar {
+    background-color: white;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-container {
+    width: 170px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.logo-container img {
+    height: 50%;
+    object-fit: contain;
+    margin: 0;
+}
+
+.logo-label-container {
+    display: flex;
+    flex-direction: column;
+    text-wrap: nowrap;
+    gap: 0;
+}
+
+.logo-label-container h1, h5 {
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: space-between; /* Adjust spacing as needed */
+}
+
+.login-button,
+.signup-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50%;
+    height: 50%;
+    text-wrap: nowrap;
+}
+
+.login-button {
+    background-color: #00264d;
+    color: white;
+}
+
+.signup-button {
+    background-color: #00d1b2;
+    color: white;
+}
+
+.welcome-message {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 200px;
+}
+
+.welcome-message h1 {
+    text-align: center;
+    font-size: 3rem;
+}

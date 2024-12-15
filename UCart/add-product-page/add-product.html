@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../template/styles-general.css">
+    <link rel="stylesheet" href="styles-add-product.css">
+</head>
+<body>
+    
+    <div class="form-container">
+        <h1 class="heading">Add Product</h1>
+        <form action="serve-add-product.php" method="POST" enctype="multipart/form-data">
+            <!-- Product Name -->
+            <div class="form-group">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" placeholder="Product Name" required>
+            </div>
+        
+            <!-- Price -->
+            <div class="form-group">
+                <label for="product-price">Price:</label>
+                <input type="number" id="product-price" name="product-price" placeholder="Product Price" step="0.01" required>
+            </div>
+        
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" placeholder="Enter product description" required></textarea>
+            </div>
+        
+            <!-- Category -->
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Wellness">Wellness</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Gifts">Gifts</option>
+                    <option value="Foods">Foods</option>
+                </select>
+            </div>
+        
+            <!-- Product Image -->
+            <div class="form-group">
+                <label for="product-picture">Product Image:</label>
+                <input type="file" id="product-picture" name="product-picture" accept="image/*" required>
+                <div class="uploaded-image" id="uploaded-image-preview">
+                    <!-- Placeholder for uploaded image -->
+                </div>
+            </div>
+        
+            <!-- Submit Button -->
+            <div class="button-container">
+                <button type="submit" class="submit-button">Add Product</button>
+            </div>
+        </form>
+        
+
+        <script>
+            const fileInput = document.getElementById('product-picture');
+            const previewContainer = document.getElementById('uploaded-image-preview');
+    
+            // Listen for file input changes
+            fileInput.addEventListener('change', () => {
+                const file = fileInput.files[0];
+    
+                if (file) {
+                    const reader = new FileReader();
+    
+                    // On file read success, set the preview
+                    reader.onload = function (e) {
+                        previewContainer.innerHTML = `<img src="${e.target.result}" alt="Uploaded Image" style="max-width: 100%; height: auto;">`;
+                    };
+    
+                    reader.readAsDataURL(file); // Read file as DataURL for preview
+                } else {
+                    previewContainer.innerHTML = ''; // Clear preview if no file
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

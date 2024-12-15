@@ -1,0 +1,120 @@
+<head>
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+    <style type="text/css">
+        .nav-bar {
+            background-color: white;
+            width: 100vw;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Ensures vertical centering of content */
+            padding: 0 20px; /* Provides horizontal padding for better alignment */
+            box-sizing: border-box; /* Prevents overflow issues */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            width: 170px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .logo-container img {
+            height: 50%;
+            object-fit: contain;
+            cursor: pointer;
+        }
+
+        .logo-label-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-left: 10px;
+        }
+
+        .logo-label-container h1 {
+            margin: 0;
+            color: #00264d; /* Dark blue for "UCart" title */
+        }
+
+        .logo-label-container h5 {
+            margin: 0;
+            color: #00ADB5; /* Teal for "Product Listing" subtitle */
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .login-button,
+        .signup-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-wrap: nowrap;
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+        }
+
+        /* LOGIN Button */
+        .login-button {
+            background-color: #00264d;
+            color: white;
+        }
+
+        /* Hover effect for LOGIN button */
+        .login-button:hover {
+            background-color: #001c33; /* Darker blue on hover */
+            transform: scale(1.05); /* Slightly enlarge the button on hover */
+        }
+
+        /* SIGN UP Button */
+        .signup-button {
+            background-color: #00d1b2;
+            color: white;
+        }
+
+        /* Hover effect for SIGN UP button */
+        .signup-button:hover {
+            background-color: #00b29e; /* Darker teal on hover */
+            transform: scale(1.05); /* Slightly enlarge the button on hover */
+        }
+
+        /* Optional: Styling for the "welcome message" section */
+        .welcome-message {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            margin-top: 200px;
+        }
+
+        .welcome-message h1 {
+            text-align: center;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <!-- Logo Label Container -->
+        <div class="logo-container">
+            <img src="../images/logo-canva2.png" alt="logo" onclick="window.location.href='../welcome-page/serve-welcome.php';">
+            <div class="logo-label-container">
+                <h1>UCart</h1>
+                <h5>Product Listing</h5>
+            </div>
+        </div>
+
+        <!-- Buttons Container -->
+        <div class="button-container">
+            <button class="login-button" onclick="window.location.href='../signin-page/serve-signin.php';">LOGIN</button>
+            <button class="signup-button" onclick="window.location.href='../signup-page/serve-signup.php';">SIGN UP</button>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,300 @@
+/* General Reset for Better Consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url('../images/2222.jpg'); /* Specify your image here */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the image fixed in place while scrolling */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* Centering the Filter Container */
+.parent-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Filter Container Styling */
+.filter-container {
+  background-color: #fff;
+  border-radius: 12px;
+  width: 350px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.filter-container:hover {
+  transform: scale(1.02); /* Subtle hover effect */
+}
+
+/* Title Styling */
+h1.section-title, h2.section-title {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Search Box Styling */
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.search-box:focus {
+  border-color: #00ADB5; /* Accent color */
+  outline: none;
+}
+
+.search-button {
+  background-color: #00ADB5;
+  color: white;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.search-button:hover {
+  background-color: #007b8a;
+}
+
+.add-button {
+  background-color: #142140;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #142140cc;
+}
+
+/* Categories Section Styling */
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox-list label {
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-list input {
+  margin-right: 10px;
+}
+
+/* Apply Button Styling */
+.apply-button {
+  background-color: #00ADB5;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #007b8a;
+}
+
+/* Product Container Styling */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0px 20px 0 10px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-name {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 1.1em;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product-category {
+  font-size: 0.9em;
+  color: #999;
+}
+
+.product-card img {
+  width: 100%;   /* Make the image take up the full width */
+  height: 200px; /* Set a fixed height for the square box */
+  border-radius: 10px; /* Optional: add rounded corners to the image */
+  object-fit: contain;
+}
+
+.view-more {
+  display: inline-block;
+  padding: 10px;
+  background-color: #00ADB5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.view-more:hover {
+  background-color: #007b8a;
+}
+
+/* Responsive Design for Small Screens */
+@media screen and (max-width: 768px) {
+  .parent-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .filter-container {
+    width: 90%; /* Expand filter container width */
+    height: auto;
+  }
+
+  .categories-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .search-section {
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .checkbox-list {
+    gap: 8px;
+  }
+
+  .apply-button {
+    width: 100%;
+  }
+
+  /* Product Grid for Small Screens */
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns for smaller screens */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-name {
+    font-size: 1.1em;
+  }
+
+  .product-price {
+    font-size: 1em;
+  }
+
+  .product-description {
+    font-size: 0.85em;
+  }
+
+  .view-more {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  .product-card img {
+    height: 150px; /* Adjust image height for tablet view */
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-card {
+    width: 200px;
+  }
+
+  .product-container {
+    width: 620px;
+  }
+}

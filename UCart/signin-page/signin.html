@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCart</title>
+    <link rel="stylesheet" href="styles-signin.css">
+</head>
+<body>
+    <div class="signin-form-container">
+        <form action="serve-signin.php" method="POST">
+            <h1>Sign In</h1>
+            <input type="text" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <button type="submit" name="submit">LOGIN</button>   
+        </form>
+        
+        
+        <p style="margin-top: 70px;">No account yet?</p>
+        <button style="margin-top: auto;" onclick="window.location.href='../signup-page/serve-signup.php'">SIGN UP</button>
+    </div>
+</body>
+</html>

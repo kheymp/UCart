@@ -1,0 +1,76 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #142140;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('../images/signup-wallpaper.png'); /* Specify your image here */
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed in place while scrolling */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.signup-form-container {
+    color: white;
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(to bottom, #00adb5, #004b78);
+    border-radius: 20px;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form-container:hover {
+    transform: scale(1.02); /* Subtle hover effect */
+  }
+
+.signup-form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.signup-form-container h2 {
+    margin-bottom: 20px;
+}
+  
+.signup-form-container input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+  
+.signup-form-container button {
+    background-color: #142140;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease; 
+}
+
+.signup-form-container button:hover {
+    transform: scale(1.05);
+    background-color: #001c33;
+}
+  
+.signup-form-container p {
+    margin-bottom: 10px;
+}
+
+.account-type-container {
+    display: flex;
+}
