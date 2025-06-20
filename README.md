@@ -25,3 +25,5 @@ Follow these steps to set up **UCart** on your local server (XAMPP, WAMP, MAMP, 
 - Basic knowledge of PHP and MySQL.
 
 ---
+
+![image_alt](https://github.com/kheymp/UCart/blob/de28b8d1cf796e0d1ca354d88989c42ecd45faad/Ucart.jpg)
